@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-    selector: 'footer-component',
+    selector: 'app-layout-footer',
     templateUrl: './footer.component.html'
 })
 
