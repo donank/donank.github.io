@@ -8,14 +8,14 @@ module.exports = {
         main: './src/main.ts'
     },
     output: {
-        path: path.join(__dirname, "../dist/"),
-        filename: "[name].bundle.js",
+        path: path.join(__dirname, '../dist'),
+        filename: "index.bundle.js",
     },
     resolve: {
         extensions: ['.js', '.ts', '.html']
     },
     devServer: {
-        contentBase: path.join(__dirname, "../dist/"),
+        contentBase: path.join(__dirname, '../dist'),
         port: 9000
     },
     devtool: 'inline-source-map',
@@ -31,7 +31,7 @@ module.exports = {
             filename: "index.html",
             showErrors: true,
             title: "Personal App",
-            path: path.join(__dirname, "../dist/"),
+            path: path.join(__dirname, '../dist'),
             hash: true
         }),
         new ContextReplacementPlugin(
