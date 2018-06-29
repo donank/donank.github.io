@@ -1,5 +1,8 @@
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import './polyfills';
-import { AppModule } from './components/app/app.module';
+import { AppModule } from './app/app.module';
 
-platformBrowserDynamic().bootstrapModule(AppModule);
+const bootstrapPromise =  platformBrowserDynamic().bootstrapModule(AppModule);
+
+bootstrapPromise.then(success => console.log(`Bootstrap Success`))
+  .catch(err => console.error(`Bootstrap error : ${err}`));
