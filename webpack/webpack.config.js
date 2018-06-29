@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { ContextReplacementPlugin } = require('webpack');
 
 module.exports = {
+    mode: 'development',
     entry: {
         main: './src/main.ts'
     },
