@@ -12,7 +12,7 @@ module.exports = {
         filename: "index.bundle.js",
     },
     resolve: {
-        extensions: ['.js', '.ts', '.html']
+        extensions: ['.js', '.ts', '.html', '.css', '.scss']
     },
     devServer: {
         contentBase: path.join(__dirname, '../dist'),
@@ -21,8 +21,9 @@ module.exports = {
     devtool: 'inline-source-map',
     module: {
         rules: [
-            { test: /.ts$/, use: ['awesome-typescript-loader', 'angular2-template-loader'] },
-            { test: /.html$/, use: 'raw-loader' }
+            { test: /\.ts$/, use: ['awesome-typescript-loader', 'angular2-template-loader'] },
+            { test: /\.html$/, use: 'raw-loader' },
+            { test: /\.(s*)css$/, use: ['style-loader', 'css-loader', 'sass-loader'] }
         ]
     },
     plugins: [
